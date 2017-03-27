@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'wikipedia'
 require 'set'
+require 'timeout'
 require './lib/wiki_game/api'
 require './lib/wiki_game/engine'
 require './lib/wiki_game/algorithms/graph_search'

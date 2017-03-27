@@ -13,24 +13,24 @@ RSpec.describe WikiGame::Engine do
   describe '#connection_between_pages' do
     let(:from_bfs_to_algorithm) do
       [
-        { title: "Breadth-first search", url: "https://en.wikipedia.org/wiki/Breadth-first_search" },
-        { title: "Algorithm", url: "https://en.wikipedia.org/wiki/Algorithm" }
+        { title: 'Breadth-first search', url: 'https://en.wikipedia.org/wiki/Breadth-first_search' },
+        { title: 'Algorithm', url: 'https://en.wikipedia.org/wiki/Algorithm' }
       ]
     end
 
     let(:from_a_star_to_allen_newell) do
       [
-        { title: "A* search algorithm", url: "https://en.wikipedia.org/wiki/A*_search_algorithm" },
-        { title: "Alpha–beta pruning", url: "https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning" },
-        { title: "Allen Newell", url: "https://en.wikipedia.org/wiki/Allen_Newell" }
+        { title: 'A* search algorithm', url: 'https://en.wikipedia.org/wiki/A*_search_algorithm' },
+        { title: 'Alpha–beta pruning', url: 'https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning' },
+        { title: 'Allen Newell', url: 'https://en.wikipedia.org/wiki/Allen_Newell' }
       ]
     end
 
     context 'using depth first search' do
       it 'raise time-out error when there is a direct link between the pages' do
+        stub_const('WikiGame::Engine::TIMEOUT_SECONDS', 1) # it could be 60 seconds the results will be the same
         engine = described_class.new('Breadth-first search', 'Algorithm', dfs_strategy)
-         # TODO: Add timeout error
-        expect { engine.connection_between_pages }.to raise_error('jk', //)
+        expect { engine.connection_between_pages }.to raise_error(Timeout::Error)
       end
     end
 
@@ -46,9 +46,9 @@ RSpec.describe WikiGame::Engine do
       end
 
       it 'raise time-out error when there is no direct link between the pages and they are not close linked' do
+        stub_const('WikiGame::Engine::TIMEOUT_SECONDS', 1) # it could be 60 seconds the results will be the same
         engine = described_class.new('Benjamin+Franklin', 'Austro-Hungarian_Empire', bfs_strategy)
-         # TODO: Add timeout error
-        expect { engine.connection_between_pages }.to raise_error('jk', //)
+        expect { engine.connection_between_pages }.to raise_error(Timeout::Error)
       end
     end
 
@@ -60,8 +60,7 @@ RSpec.describe WikiGame::Engine do
 
       it 'find a path when there is no direct link between the pages and they are not close linked' do
         engine = described_class.new('Benjamin+Franklin', 'Austro-Hungarian_Empire', bfs_page_rank_strategy)
-         # TODO: Add timeout error
-        expect(engine.connection_between_pages).to eq(['1'])
+        expect(engine.connection_between_pages).to eq(['...'])
       end
     end
   end

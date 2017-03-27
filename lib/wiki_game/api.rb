@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 require 'grape'
+require 'grape-entity'
 
 module WikiGame
-  class API < ::Grape::API
+  module Entities
+    class Engine < Grape::Entity
+      expose :connection_between_pages, documentation: { type: Array, desc: 'Path between two wikipedia pages.' }
+    end
+  end
+
+  class API < Grape::API
     version 'v1', using: :header, vendor: 'wiki_game'
     format :json
     prefix :api
@@ -17,7 +24,7 @@ module WikiGame
       target_page = params[:to]
       strategy = ::WikiGame::Algorithms::BreadthFirstSearch.new
       engine = ::WikiGame::Engine.new(start_page, target_page, strategy)
-      engine.connection_between_pages.to_json
+      present engine.connection_between_pages, WikiGame::Entities::Engine
     end
   end
 end

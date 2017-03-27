@@ -6,6 +6,8 @@ module WikiGame
     attr_accessor :search_strategy
     attr_reader :start_page_title, :end_page_title
 
+    TIMEOUT_SECONDS = 60
+
     def initialize(start_page_title, end_page_title, search_strategy)
       @start_page_title = start_page_title
       @end_page_title = end_page_title
@@ -13,8 +15,10 @@ module WikiGame
     end
 
     def connection_between_pages
-      page_titles = search_strategy.path_between(start_page_title, end_page_title)
-      page_titles.map { |page_title| page_data(page_title) }
+      Timeout::timeout(TIMEOUT_SECONDS) do
+        page_titles = search_strategy.path_between(start_page_title, end_page_title)
+        page_titles.map { |page_title| page_data(page_title) }
+      end
     end
 
     private

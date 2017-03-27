@@ -1,22 +1,16 @@
 # frozen_string_literal: true
 require 'elasticsearch'
+require 'wikipedia'
 
 module WikiGame
   module DataAnalyzers
     class ElasticsearchAnalyzer
       attr_reader :client
 
-      ENV_CONFIG = { url: 'http://localhost:9200', log: false }
+      ENV_CONFIG = { host: 'localhost:9200', log: false }
       PAGE_MAPPING = {
         index: 'pages',
-        type: 'page',
-        body: {
-          page: {
-            properties: {
-              title: { type: 'text' }
-            }
-          }
-        }
+        type: 'page'
       }
 
       def initialize
@@ -25,7 +19,7 @@ module WikiGame
       end
 
       def add_page(page_title)
-        client.index(index: 'pages', type: 'page', body: { title: page_title }, refresh: true)
+        client.index(index: 'pages', type: 'page', body: page_data(page_title), refresh: true)
       end
 
       def add_pages(page_titles)
@@ -36,7 +30,7 @@ module WikiGame
         find_similar_pages(page_title, 1).first
       end
 
-      def find_similar_pages(page_title, limit = 20)
+      def find_similar_pages(page_title, limit = 10)
         search(page_title, limit)
       end
 
@@ -52,7 +46,7 @@ module WikiGame
       end
 
       def search_query(query)
-        { query: { match: { title: query } } }
+        { query: { multi_match: { query: query, fields: %w(title body) } } }
       end
 
       def data_formating(result)
@@ -62,10 +56,15 @@ module WikiGame
 
       def bulk_add(page_titles)
         return unless page_titles.any?
-        pages = page_titles.map do |title|
-          { index: { _index: 'pages', _type: 'page', data: { title: title } } }
+        pages = page_titles.map do |page_title|
+          { index: { _index: 'pages', _type: 'page', data: page_data(page_title) } }
         end
         client.bulk(body: pages, refresh: true)
+      end
+
+      def page_data(page_title)
+        page = Wikipedia::find(page_title)
+        { title: page.title, body: page.text }
       end
     end
   end

@@ -35,13 +35,13 @@ RSpec.describe WikiGame::DataAnalyzers::ElasticsearchAnalyzer do
     it 'return 5 most similar page titles when are many similar pages including the search phrase' do
       search.add_pages(page_titles_from_benjamin_franklin)
       page_title = 'American'
-      expect(search.find_similar_pages(page_title, 5)).to match_array(["American Enlightenment", "American Philosophical Society", "American Revolution", "American football", "Early American currency"])
+      expect(search.find_similar_pages(page_title, 5)).to match_array(['American Enlightenment', 'American Philosophical Society', 'American Heritage (magazine)', 'American football', 'Early American currency'])
     end
 
     it 'return 5 most similar page titles when are not any similar pages including the search phrase' do
       search.add_pages(page_titles_from_benjamin_franklin)
       page_title = 'Austria-Hungary'
-      expect(search.find_similar_pages('Infantry Regiment', 5)).to eq(page_title)
+      expect(search.find_similar_pages(page_title, 5)).to be_empty
     end
   end
 end

@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require 'wiki_game/data_analyzers/elasticsearch_analyzer'
+
 module WikiGame
   module Algorithms
     class BreadthFirstSearchPageRank < BreadthFirstSearch
