@@ -25,7 +25,7 @@ http://localhost:3000/api/connect?from=A*%20search%20algorithm&to=Algorithm
 ```
 To start the elasticsearch run (Option only for one of the searching strategies):
 ```bash
-ruby intergalactic_listener.rb
+./bin/elasticsearch-5/bin/elasticsearch
 ```
 
 # Test
