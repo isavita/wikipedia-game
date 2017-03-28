@@ -26,6 +26,10 @@ module WikiGame
           @@client.get(key)
         end
 
+        def delete(key)
+          @@client.del(key)
+        end
+
         def exists?(key)
           @client.exists(key)
         end

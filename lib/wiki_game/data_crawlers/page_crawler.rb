@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'wiki_game/data_stores/redis_store'
+require './lib/wiki_game/data_stores/redis_store'
+require './lib/wiki_game/algorithms/lazy_crawl'
 
 module WikiGame
   module DataCrawlers
@@ -10,8 +11,22 @@ module WikiGame
         @crawl_strategy = crawl_strategy
       end
 
-      def crawl(start_page, end_page = 'Crawl Every Page in Wikipedia', pulling_step = 100)
-        @crawl_strategy.crawl(start_page, end_page, pulling_step)
+      def crawl(start_page, pulling_step = 10)
+        @crawl_strategy.crawl(start_page, pulling_step).each do |page|
+          next if page.nil? || page.json['missing']
+          WikiGame::DataStores::RedisStore.add(page.title, page_data(page))
+        end
+      end
+
+      private
+
+      def page_data(page)
+        {
+          title: page.title,
+          summary: page.summary,
+          text: page.text,
+          fullurl: page.fullurl
+        }
       end
     end
   end
