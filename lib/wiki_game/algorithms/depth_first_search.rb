@@ -15,6 +15,7 @@ module WikiGame
       protected
 
       def find_path!(start_page, target_page)
+        return [start_page] if start_page == target_page
         @page_stack.push(start_page)
         path_map = {} # for tracking the path
         loop do

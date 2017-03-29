@@ -6,7 +6,7 @@ module WikiGame
     attr_accessor :search_strategy
     attr_reader :start_page_title, :end_page_title
 
-    TIMEOUT_SECONDS = 60
+    TIMEOUT_SECONDS = 120
 
     def initialize(start_page_title, end_page_title, search_strategy)
       @start_page_title = start_page_title

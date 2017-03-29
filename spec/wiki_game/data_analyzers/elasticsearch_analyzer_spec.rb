@@ -12,19 +12,19 @@ RSpec.describe WikiGame::DataAnalyzers::ElasticsearchAnalyzer do
   end
 
   describe '#find_similar_page' do
-    it 'can find itself' do
+    xit 'can find itself' do
       page_title = '111th Infantry Regiment (United States)'
       search.add_page(page_title)
       expect(search.find_similar_page(page_title)).to eq(page_title)
     end
 
-    it 'can find a similar page' do
+    xit 'can find a similar page' do
       page_title = '111th Infantry Regiment (United States)'
       search.add_page(page_title)
       expect(search.find_similar_page('Infantry Regiment')).to eq(page_title)
     end
 
-    it 'cannot find a completely different page' do
+    xit 'cannot find a completely different page' do
       page_title = '111th Infantry Regiment (United States)'
       search.add_page(page_title)
       expect(search.find_similar_page('I am from Mexico')).to be_nil
@@ -32,13 +32,13 @@ RSpec.describe WikiGame::DataAnalyzers::ElasticsearchAnalyzer do
   end
 
   describe '#find_similar_pages' do
-    it 'return 5 most similar page titles when are many similar pages including the search phrase' do
+    xit 'return 5 most similar page titles when are many similar pages including the search phrase' do
       search.add_pages(page_titles_from_benjamin_franklin)
       page_title = 'American'
       expect(search.find_similar_pages(page_title, 5)).to match_array(['American Enlightenment', 'American Philosophical Society', 'American Heritage (magazine)', 'American football', 'Early American currency'])
     end
 
-    it 'return 5 most similar page titles when are not any similar pages including the search phrase' do
+    xit 'return 5 most similar page titles when are not any similar pages including the search phrase' do
       search.add_pages(page_titles_from_benjamin_franklin)
       page_title = 'Austria-Hungary'
       expect(search.find_similar_pages(page_title, 5)).to be_empty
