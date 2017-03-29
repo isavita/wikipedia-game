@@ -27,6 +27,10 @@ To start the elasticsearch run (Option only for one of the searching strategies)
 ```bash
 ./bin/elasticsearch-5/bin/elasticsearch
 ```
+To start the redis-client run (Not in use yet)
+```bash
+./bin/redis-3.2.8/src/redis-server
+```
 
 # Test
 To run the tests run the following:

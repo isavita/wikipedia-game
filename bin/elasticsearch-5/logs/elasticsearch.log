@@ -1,146 +1,24 @@
-[2017-03-27T00:06:08,700][INFO ][o.e.n.Node               ] [eb4tmpS] stopping ...
-[2017-03-27T00:06:08,733][INFO ][o.e.n.Node               ] [eb4tmpS] stopped
-[2017-03-27T00:06:08,733][INFO ][o.e.n.Node               ] [eb4tmpS] closing ...
-[2017-03-27T00:06:08,747][INFO ][o.e.n.Node               ] [eb4tmpS] closed
-[2017-03-27T00:06:13,215][INFO ][o.e.n.Node               ] [] initializing ...
-[2017-03-27T00:06:13,337][INFO ][o.e.e.NodeEnvironment    ] [eb4tmpS] using [1] data paths, mounts [[/home (/dev/mapper/centos-home)]], net usable_space [164gb], net total_space [639.9gb], spins? [possibly], types [xfs]
-[2017-03-27T00:06:13,337][INFO ][o.e.e.NodeEnvironment    ] [eb4tmpS] heap size [1.9gb], compressed ordinary object pointers [true]
-[2017-03-27T00:06:13,339][INFO ][o.e.n.Node               ] node name [eb4tmpS] derived from node ID [eb4tmpSqQMupkCg8nyq1mQ]; set [node.name] to override
-[2017-03-27T00:06:13,341][INFO ][o.e.n.Node               ] version[5.2.2], pid[22730], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/3.10.0-327.3.1.el7.x86_64/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_121/25.121-b13]
-[2017-03-27T00:06:14,017][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [aggs-matrix-stats]
-[2017-03-27T00:06:14,017][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [ingest-common]
-[2017-03-27T00:06:14,017][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [lang-expression]
-[2017-03-27T00:06:14,017][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [lang-groovy]
-[2017-03-27T00:06:14,017][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [lang-mustache]
-[2017-03-27T00:06:14,018][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [lang-painless]
-[2017-03-27T00:06:14,018][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [percolator]
-[2017-03-27T00:06:14,018][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [reindex]
-[2017-03-27T00:06:14,018][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [transport-netty3]
-[2017-03-27T00:06:14,018][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded module [transport-netty4]
-[2017-03-27T00:06:14,019][INFO ][o.e.p.PluginsService     ] [eb4tmpS] loaded plugin [ingest-attachment]
-[2017-03-27T00:06:15,640][INFO ][o.e.n.Node               ] initialized
-[2017-03-27T00:06:15,640][INFO ][o.e.n.Node               ] [eb4tmpS] starting ...
-[2017-03-27T00:06:15,752][INFO ][o.e.t.TransportService   ] [eb4tmpS] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
-[2017-03-27T00:06:15,758][WARN ][o.e.b.BootstrapChecks    ] [eb4tmpS] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
-[2017-03-27T00:06:18,798][INFO ][o.e.c.s.ClusterService   ] [eb4tmpS] new_master {eb4tmpS}{eb4tmpSqQMupkCg8nyq1mQ}{7FWfZCrpSq-2bsGtiuMm8g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
-[2017-03-27T00:06:18,816][INFO ][o.e.h.HttpServer         ] [eb4tmpS] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
-[2017-03-27T00:06:18,816][INFO ][o.e.n.Node               ] [eb4tmpS] started
-[2017-03-27T00:06:18,882][INFO ][o.e.g.GatewayService     ] [eb4tmpS] recovered [0] indices into cluster_state
-[2017-03-27T00:06:50,508][INFO ][o.e.n.Node               ] [eb4tmpS] stopping ...
-[2017-03-27T00:06:50,532][INFO ][o.e.n.Node               ] [eb4tmpS] stopped
-[2017-03-27T00:06:50,532][INFO ][o.e.n.Node               ] [eb4tmpS] closing ...
-[2017-03-27T00:06:50,545][INFO ][o.e.n.Node               ] [eb4tmpS] closed
-[2017-03-27T00:07:52,990][INFO ][o.e.n.Node               ] [] initializing ...
-[2017-03-27T00:07:53,110][INFO ][o.e.e.NodeEnvironment    ] [ci7Wnd1] using [1] data paths, mounts [[/home (/dev/mapper/centos-home)]], net usable_space [164gb], net total_space [639.9gb], spins? [possibly], types [xfs]
-[2017-03-27T00:07:53,110][INFO ][o.e.e.NodeEnvironment    ] [ci7Wnd1] heap size [1.9gb], compressed ordinary object pointers [true]
-[2017-03-27T00:07:53,112][INFO ][o.e.n.Node               ] node name [ci7Wnd1] derived from node ID [ci7Wnd1YTqmzTyvuFZ3b7w]; set [node.name] to override
-[2017-03-27T00:07:53,114][INFO ][o.e.n.Node               ] version[5.2.2], pid[22998], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/3.10.0-327.3.1.el7.x86_64/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_121/25.121-b13]
-[2017-03-27T00:07:53,791][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [aggs-matrix-stats]
-[2017-03-27T00:07:53,791][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [ingest-common]
-[2017-03-27T00:07:53,791][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-expression]
-[2017-03-27T00:07:53,791][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-groovy]
-[2017-03-27T00:07:53,791][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-mustache]
-[2017-03-27T00:07:53,791][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-painless]
-[2017-03-27T00:07:53,791][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [percolator]
-[2017-03-27T00:07:53,792][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [reindex]
-[2017-03-27T00:07:53,792][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [transport-netty3]
-[2017-03-27T00:07:53,792][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [transport-netty4]
-[2017-03-27T00:07:53,792][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded plugin [ingest-attachment]
-[2017-03-27T00:07:55,428][INFO ][o.e.n.Node               ] initialized
-[2017-03-27T00:07:55,428][INFO ][o.e.n.Node               ] [ci7Wnd1] starting ...
-[2017-03-27T00:07:55,558][INFO ][o.e.t.TransportService   ] [ci7Wnd1] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
-[2017-03-27T00:07:55,565][WARN ][o.e.b.BootstrapChecks    ] [ci7Wnd1] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
-[2017-03-27T00:07:58,613][INFO ][o.e.c.s.ClusterService   ] [ci7Wnd1] new_master {ci7Wnd1}{ci7Wnd1YTqmzTyvuFZ3b7w}{HAGWtkRIQR2QpaQO2T-7SA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
-[2017-03-27T00:07:58,639][INFO ][o.e.h.HttpServer         ] [ci7Wnd1] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
-[2017-03-27T00:07:58,640][INFO ][o.e.n.Node               ] [ci7Wnd1] started
-[2017-03-27T00:07:58,707][INFO ][o.e.g.GatewayService     ] [ci7Wnd1] recovered [0] indices into cluster_state
-[2017-03-27T00:16:52,559][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:16:53,732][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/_4o0A8fFTPywKReD2as-yw] deleting index
-[2017-03-27T00:16:53,848][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:16:54,978][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/FbT8Pth_RuSqfxtIQY9aSQ] create_mapping [page]
-[2017-03-27T00:16:55,354][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/FbT8Pth_RuSqfxtIQY9aSQ] deleting index
-[2017-03-27T00:16:55,459][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:16:56,508][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/pCVocSVSR0W96zWDiD7nOg] create_mapping [page]
-[2017-03-27T00:16:56,670][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/pCVocSVSR0W96zWDiD7nOg] deleting index
-[2017-03-27T00:16:56,774][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:16:57,822][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/eVfI2Xj3SdG-DAOd8M_y9w] create_mapping [page]
-[2017-03-27T00:16:57,994][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/eVfI2Xj3SdG-DAOd8M_y9w] deleting index
-[2017-03-27T00:16:58,129][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:16:59,201][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/-_IduF4_T_KOfohE-gVaTg] create_mapping [page]
-[2017-03-27T00:16:59,733][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/-_IduF4_T_KOfohE-gVaTg] deleting index
-[2017-03-27T00:16:59,866][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:17:00,900][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/-TTME9ciTHW6aglUcFFeog] create_mapping [page]
-[2017-03-27T00:17:46,689][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/-TTME9ciTHW6aglUcFFeog] deleting index
-[2017-03-27T00:17:46,817][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:17:47,919][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/j60kDUW7SpOD6AQ3QwANRw] deleting index
-[2017-03-27T00:17:48,024][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:17:49,283][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/jk3GjiJzT5WbQSf4o2-Ntw] deleting index
-[2017-03-27T00:17:49,388][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:17:50,575][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/Gha13hKuQaqES9J-ivlcUg] deleting index
-[2017-03-27T00:17:50,678][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:17:51,670][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/ezD4kNYIRoaSGo71S2Sovw] deleting index
-[2017-03-27T00:18:49,974][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:18:51,026][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/0qdBOlhgSfCtVokx-FhxsA] deleting index
-[2017-03-27T00:18:51,555][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:18:52,619][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/1Mpi489_R2OU09G9tfmUeQ] create_mapping [page]
-[2017-03-27T00:18:52,798][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/1Mpi489_R2OU09G9tfmUeQ] deleting index
-[2017-03-27T00:18:53,318][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:18:54,488][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/nl3ddlTNSw-ij9Kp8K6WCw] create_mapping [page]
-[2017-03-27T00:18:54,615][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/nl3ddlTNSw-ij9Kp8K6WCw] deleting index
-[2017-03-27T00:18:55,192][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:18:56,183][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/-Y-gdftpSnK0vJpYhkTAUw] create_mapping [page]
-[2017-03-27T00:18:56,365][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/-Y-gdftpSnK0vJpYhkTAUw] deleting index
-[2017-03-27T00:23:25,831][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:23:28,726][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/zfoiQkwbQIqaVILZOWqHBQ] create_mapping [page]
-[2017-03-27T00:23:31,812][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/zfoiQkwbQIqaVILZOWqHBQ] deleting index
-[2017-03-27T00:27:38,291][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:27:39,302][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/jjXxnsXSSKGn_ZLjpiVuig] create_mapping [page]
-[2017-03-27T00:36:32,255][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/jjXxnsXSSKGn_ZLjpiVuig] deleting index
-[2017-03-27T00:36:32,726][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:36:33,825][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/-avyYv3OSnaVBrunGKBPkQ] create_mapping [page]
-[2017-03-27T00:36:33,986][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/-avyYv3OSnaVBrunGKBPkQ] deleting index
-[2017-03-27T00:36:34,812][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:36:35,821][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/jllZt_9TSwalC4mLk9OXMQ] create_mapping [page]
-[2017-03-27T00:36:35,987][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/jllZt_9TSwalC4mLk9OXMQ] deleting index
-[2017-03-27T00:36:36,419][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:36:37,467][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/caxAMZlTQq64Wd756xnRtQ] create_mapping [page]
-[2017-03-27T00:36:37,652][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/caxAMZlTQq64Wd756xnRtQ] deleting index
-[2017-03-27T00:40:40,463][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:40:41,466][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/Jl6kyUA8QvSL5XKIOIGWMg] create_mapping [page]
-[2017-03-27T00:40:43,669][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/Jl6kyUA8QvSL5XKIOIGWMg] deleting index
-[2017-03-27T00:44:33,906][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T00:44:34,989][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/1WNXRwYsT1Kd06TEThQYKg] create_mapping [page]
-[2017-03-27T00:50:37,457][INFO ][o.e.n.Node               ] [ci7Wnd1] stopping ...
-[2017-03-27T00:50:37,485][INFO ][o.e.n.Node               ] [ci7Wnd1] stopped
-[2017-03-27T00:50:37,487][INFO ][o.e.n.Node               ] [ci7Wnd1] closing ...
-[2017-03-27T00:50:37,502][INFO ][o.e.n.Node               ] [ci7Wnd1] closed
-[2017-03-27T00:50:39,810][INFO ][o.e.n.Node               ] [] initializing ...
-[2017-03-27T00:50:39,921][INFO ][o.e.e.NodeEnvironment    ] [ci7Wnd1] using [1] data paths, mounts [[/home (/dev/mapper/centos-home)]], net usable_space [164gb], net total_space [639.9gb], spins? [possibly], types [xfs]
-[2017-03-27T00:50:39,921][INFO ][o.e.e.NodeEnvironment    ] [ci7Wnd1] heap size [1.9gb], compressed ordinary object pointers [true]
-[2017-03-27T00:50:39,930][INFO ][o.e.n.Node               ] node name [ci7Wnd1] derived from node ID [ci7Wnd1YTqmzTyvuFZ3b7w]; set [node.name] to override
-[2017-03-27T00:50:39,932][INFO ][o.e.n.Node               ] version[5.2.2], pid[28444], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/3.10.0-327.3.1.el7.x86_64/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_121/25.121-b13]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [aggs-matrix-stats]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [ingest-common]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-expression]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-groovy]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-mustache]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-painless]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [percolator]
-[2017-03-27T00:50:40,603][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [reindex]
-[2017-03-27T00:50:40,604][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [transport-netty3]
-[2017-03-27T00:50:40,604][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [transport-netty4]
-[2017-03-27T00:50:40,605][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded plugin [ingest-attachment]
-[2017-03-27T00:50:42,235][INFO ][o.e.n.Node               ] initialized
-[2017-03-27T00:50:42,235][INFO ][o.e.n.Node               ] [ci7Wnd1] starting ...
-[2017-03-27T00:50:42,347][INFO ][o.e.t.TransportService   ] [ci7Wnd1] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
-[2017-03-27T00:50:42,352][WARN ][o.e.b.BootstrapChecks    ] [ci7Wnd1] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
-[2017-03-27T00:50:45,393][INFO ][o.e.c.s.ClusterService   ] [ci7Wnd1] new_master {ci7Wnd1}{ci7Wnd1YTqmzTyvuFZ3b7w}{RFNV_rlRTiC1p38AB8u11g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
-[2017-03-27T00:50:45,410][INFO ][o.e.h.HttpServer         ] [ci7Wnd1] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
-[2017-03-27T00:50:45,410][INFO ][o.e.n.Node               ] [ci7Wnd1] started
-[2017-03-27T00:50:45,597][INFO ][o.e.g.GatewayService     ] [ci7Wnd1] recovered [1] indices into cluster_state
-[2017-03-27T00:50:46,422][INFO ][o.e.c.r.a.AllocationService] [ci7Wnd1] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[pages][1]] ...]).
-[2017-03-27T01:41:06,832][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/1WNXRwYsT1Kd06TEThQYKg] deleting index
-[2017-03-27T01:45:07,065][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
-[2017-03-27T01:45:08,113][INFO ][o.e.c.m.MetaDataMappingService] [ci7Wnd1] [pages/PcpjFPXkT_CF2tWXlzwyXQ] create_mapping [page]
-[2017-03-27T01:45:10,582][INFO ][o.e.c.m.MetaDataDeleteIndexService] [ci7Wnd1] [pages/PcpjFPXkT_CF2tWXlzwyXQ] deleting index
-[2017-03-27T01:48:51,026][INFO ][o.e.c.m.MetaDataCreateIndexService] [ci7Wnd1] [pages] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2017-03-28T01:25:04,969][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-28T01:25:05,467][INFO ][o.e.e.NodeEnvironment    ] [ci7Wnd1] using [1] data paths, mounts [[/home (/dev/mapper/centos-home)]], net usable_space [163.9gb], net total_space [639.9gb], spins? [possibly], types [xfs]
+[2017-03-28T01:25:05,467][INFO ][o.e.e.NodeEnvironment    ] [ci7Wnd1] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-28T01:25:05,481][INFO ][o.e.n.Node               ] node name [ci7Wnd1] derived from node ID [ci7Wnd1YTqmzTyvuFZ3b7w]; set [node.name] to override
+[2017-03-28T01:25:05,484][INFO ][o.e.n.Node               ] version[5.2.2], pid[22827], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/3.10.0-327.3.1.el7.x86_64/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2017-03-28T01:25:07,840][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [aggs-matrix-stats]
+[2017-03-28T01:25:07,840][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [ingest-common]
+[2017-03-28T01:25:07,840][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-expression]
+[2017-03-28T01:25:07,840][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-groovy]
+[2017-03-28T01:25:07,840][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-mustache]
+[2017-03-28T01:25:07,840][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [lang-painless]
+[2017-03-28T01:25:07,840][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [percolator]
+[2017-03-28T01:25:07,841][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [reindex]
+[2017-03-28T01:25:07,841][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [transport-netty3]
+[2017-03-28T01:25:07,841][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded module [transport-netty4]
+[2017-03-28T01:25:07,842][INFO ][o.e.p.PluginsService     ] [ci7Wnd1] loaded plugin [ingest-attachment]
+[2017-03-28T01:25:12,056][INFO ][o.e.n.Node               ] initialized
+[2017-03-28T01:25:12,056][INFO ][o.e.n.Node               ] [ci7Wnd1] starting ...
+[2017-03-28T01:25:12,454][INFO ][o.e.t.TransportService   ] [ci7Wnd1] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-03-28T01:25:12,460][WARN ][o.e.b.BootstrapChecks    ] [ci7Wnd1] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
+[2017-03-28T01:25:15,472][INFO ][o.e.n.Node               ] [ci7Wnd1] stopping ...
+[2017-03-28T01:25:15,501][INFO ][o.e.n.Node               ] [ci7Wnd1] stopped
+[2017-03-28T01:25:15,501][INFO ][o.e.n.Node               ] [ci7Wnd1] closing ...
+[2017-03-28T01:25:15,512][INFO ][o.e.n.Node               ] [ci7Wnd1] closed

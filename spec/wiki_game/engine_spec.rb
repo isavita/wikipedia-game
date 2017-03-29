@@ -100,5 +100,6 @@ RSpec.describe WikiGame::Engine do
         expect(engine.connection_between_pages).to eq(['...'])
       end
     end
+
   end
 end
