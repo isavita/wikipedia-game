@@ -14,8 +14,9 @@ Run the following to install all gems:
 bundle install
 ```
 
-(Installing elasticsearch)[https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html]
-(Installing redis-client)[https://redis.io/topics/quickstart]
+[Installing elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html)
+
+[Installing redis-client](https://redis.io/topics/quickstart)
 
 # Run
 To start the app run:
