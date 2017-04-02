@@ -13,8 +13,8 @@ module WikiGame
 
       def crawl(start_page, pulling_step = 10)
         @crawl_strategy.crawl(start_page, pulling_step).each do |page_title, links|
-          next if page.nil? || page.json['missing'] # if the page does not exist
-          WikiGame::DataStores::RedisStore.add(page.title, page_data(page_title, links)) rescue next
+          # next if page.nil? || page.json['missing'] # if the page does not exist
+          WikiGame::Stores::Redis.add(page_title, page_data(page_title, links)) rescue next
         end
       end
 
