@@ -1,3 +1,2 @@
-/bin/elasticsearch-5/data/
-/bin/elasticsearch-5/plugins/
-/bin/elasticsearch-5/logs/
+/tmp/**
+dump.rdb

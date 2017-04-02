@@ -14,6 +14,9 @@ Run the following to install all gems:
 bundle install
 ```
 
+(Installing elasticsearch)[https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html]
+(Installing redis-client)[https://redis.io/topics/quickstart]
+
 # Run
 To start the app run:
 ```bash
@@ -22,10 +25,6 @@ rackup -p 3000
 To access the API:
 ```bash
 http://localhost:3000/api/connect?from=A*%20search%20algorithm&to=Algorithm
-```
-To start the elasticsearch run (Option only for one of the searching strategies):
-```bash
-./bin/elasticsearch-5/bin/elasticsearch
 ```
 
 # Test

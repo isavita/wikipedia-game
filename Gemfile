@@ -14,5 +14,8 @@ gem 'rack'
 # elasticsearch API client
 gem 'elasticsearch'
 
+# redis API client
+gem 'redis', '~>3.2'
+
 # tests
 gem 'rspec'
