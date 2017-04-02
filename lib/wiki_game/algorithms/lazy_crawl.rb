@@ -9,7 +9,6 @@ module WikiGame
         visited_pages = Set.new
         frontier = [start_page_title]
         Enumerator.new do |y|
-          y.yield Wikipedia.find(start_page_title)
 
           until frontier.empty?
             page_links = []
@@ -21,10 +20,10 @@ module WikiGame
                   next if visited_pages.include?(next_page_link)
                   page_links << next_page_link
                   visited_pages.add(next_page_link)
-                  y.yield Wikipedia.find(next_page_link)
                 end
                 plcontinue = page.raw_data['continue'] && page.raw_data['continue']['plcontinue']
               end while plcontinue
+              y.yield [page_title, page_links]
             end
             frontier = page_links
           end

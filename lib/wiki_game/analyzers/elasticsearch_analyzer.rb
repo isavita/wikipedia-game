@@ -3,7 +3,7 @@ require 'elasticsearch'
 require 'wikipedia'
 
 module WikiGame
-  module DataAnalyzers
+  module Analyzers
     class ElasticsearchAnalyzer
       attr_reader :client
 

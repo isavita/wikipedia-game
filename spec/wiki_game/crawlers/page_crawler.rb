@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require 'wiki_game/data_crawlers/page_crawler'
+require 'wiki_game/crawlers/page_crawler'
 
 RSpec.describe WikiGame::DataCrawlers::PageCrawler do
   let(:lazy_crawl_strategy) { WikiGame::Algorithms::LazyCrawl.new }
@@ -7,7 +7,7 @@ RSpec.describe WikiGame::DataCrawlers::PageCrawler do
   describe 'Crawing Wikipedia' do
     it 'an actual crawler that store every page information in redis' do
       crawler = described_class.new(lazy_crawl_strategy)
-      crawler.crawl('Benjamin+Franklin')
+      crawler.crawl('China')
     end
   end
 end

@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require './lib/wiki_game/algorithms/graph_search'
+
 module WikiGame
   module Algorithms
     class BreadthFirstSearch < GraphSearch
@@ -9,13 +11,14 @@ module WikiGame
       end
 
       def path_between(start_page, end_page)
+        return [] unless start_page.is_a?(String) && end_page.is_a?(String)
+        return [start_page] if start_page == end_page
         find_path!(start_page, end_page)
       end
 
       protected
 
       def find_path!(start_page, target_page)
-        return [start_page] if start_page == target_page
         @pages.push(start_page)
         @visited_pages.add(start_page)
         path_map = {} # for tracking the path
@@ -23,6 +26,7 @@ module WikiGame
           next_pages = []
           @pages.each do |current_page|
             most_promising_links(current_page, target_page).each do |next_page|
+              @@logger.info(self.class.name) { "Page #{next_page}" }
               next if @visited_pages.include?(next_page)
               @visited_pages.add(next_page)
               path_map[next_page] = current_page
