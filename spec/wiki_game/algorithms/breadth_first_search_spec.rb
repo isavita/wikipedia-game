@@ -30,5 +30,15 @@ RSpec.describe WikiGame::Algorithms::BreadthFirstSearch do
       end
     end
 
+    context 'end page is Philosophy' do
+      it 'return path between the pages when is less or equal to 3 links' do
+        expect(described_class.new.path_between('Benjamin Franklin', 'Philosophy')).to eq(['Benjamin Franklin', 'Adamantios Korais', 'Philosophy'])
+      end
+
+      it 'return path between the pages when is more than 3 links' do
+        expect(described_class.new.path_between('Austro-Hungarian Empire', 'Philosophy')).to eq(['Austro-Hungarian Empire', 'Austria-Hungary', 'Ancient history', 'Philosophy'])
+      end
+    end
+
   end
 end

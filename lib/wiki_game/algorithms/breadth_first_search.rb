@@ -3,8 +3,8 @@ require './lib/wiki_game/algorithms/graph_search'
 
 module WikiGame
   module Algorithms
-    class BreadthFirstSearch < GraphSearch
 
+    class BreadthFirstSearch < GraphSearch
       def initialize
         @visited_pages = Set.new
         @pages = []
@@ -26,7 +26,6 @@ module WikiGame
           next_pages = []
           @pages.each do |current_page|
             most_promising_links(current_page, target_page).each do |next_page|
-              @@logger.info(self.class.name) { "Page #{next_page}" }
               next if @visited_pages.include?(next_page)
               @visited_pages.add(next_page)
               path_map[next_page] = current_page
@@ -38,15 +37,6 @@ module WikiGame
         end
       end
 
-      def backtrace_path(path_map, start_page, target_page)
-        path = []
-        until target_page == start_page
-          path.push(target_page)
-          target_page = path_map[target_page]
-        end
-        path.push(start_page)
-        path.reverse
-      end
     end
   end
 end

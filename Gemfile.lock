@@ -52,6 +52,7 @@ GEM
       tool (~> 0.2)
     mustermann-grape (0.4.0)
       mustermann (= 0.4.0)
+    priority_queue_cxx (0.3.4)
     rack (2.0.1)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -87,6 +88,7 @@ DEPENDENCIES
   elasticsearch
   grape
   grape-entity
+  priority_queue_cxx
   rack
   redis (~> 3.2)
   rspec

@@ -3,8 +3,8 @@ require './lib/wiki_game/algorithms/graph_search'
 
 module WikiGame
   module Algorithms
-    class DepthFirstSearch < GraphSearch
 
+    class DepthFirstSearch < GraphSearch
       def initialize
         @parent = {}
       end
@@ -12,7 +12,7 @@ module WikiGame
       def path_between(start_page, end_page)
         return [] unless start_page.is_a?(String) && end_page.is_a?(String)
         return [start_page] if start_page == end_page
-        find_path!(start_page, end_page)
+        return [] unless find_path!(start_page, end_page)
         backtrace_path(@parent, start_page, end_page)
       end
 
@@ -27,16 +27,7 @@ module WikiGame
           end
         end
       end
-
-      def backtrace_path(parent, start_page, target_page)
-        path = []
-        until target_page == start_page
-          path.push(target_page)
-          target_page = parent[target_page]
-        end
-        path.push(start_page)
-        path.reverse
-      end
     end
+
   end
 end

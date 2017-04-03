@@ -4,6 +4,7 @@ require 'wikipedia'
 
 module WikiGame
   module Algorithms
+
     class GraphSearch
       @@logger = Logger.new(STDOUT)#File.new('tmp/graph_searches.log', 'w'), 'daily')
 
@@ -27,6 +28,17 @@ module WikiGame
         end while plcontinue
         page_links
       end
+
+      def backtrace_path(parent, start_page, target_page)
+        path = []
+        until target_page == start_page
+          path.push(target_page)
+          target_page = parent[target_page]
+        end
+        path.push(start_page)
+        path.reverse
+      end
     end
+
   end
 end
