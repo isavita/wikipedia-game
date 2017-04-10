@@ -8,13 +8,13 @@ module WikiGame
     class GraphSearch
       @@logger = Logger.new(STDOUT)#File.new('tmp/graph_searches.log', 'w'), 'daily')
 
-      def path_between(start_page, end_page)
+      def path_between(start_page, target_page)
         raise NotImplementedError, 'Implement me in the subclass'
       end
 
       protected
 
-      def find_path!(page_title)
+      def find_path!(start_page, target_page)
         raise NotImplementedError, 'Implement me in the subclass'
       end
 

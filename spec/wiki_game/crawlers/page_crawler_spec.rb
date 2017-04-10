@@ -7,7 +7,7 @@ RSpec.describe WikiGame::Crawlers::PageCrawler do
   describe 'Crawing Wikipedia' do
     it 'an actual crawler that store every page information in redis' do
       crawler = described_class.new(lazy_crawl_strategy)
-      crawler.crawl('Swimming at the 1971 Pan American Games')
+      crawler.crawl('USA')
     end
   end
 end

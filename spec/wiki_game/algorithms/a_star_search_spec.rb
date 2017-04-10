@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'wiki_game/algorithms/dijkstra_search'
 
-RSpec.describe WikiGame::Algorithms::DijkstraSearch do
+RSpec.describe WikiGame::Algorithms::AStarSearch do
   describe '#path_between' do
 
     context 'basic check for correctness' do
@@ -47,7 +47,7 @@ RSpec.describe WikiGame::Algorithms::DijkstraSearch do
       end
 
       it 'return path when start page is Democratic Republic of the Congo and the end page is Robert McNamara' do
-        expect(described_class.new.path_between('Democratic Republic of the Congo', 'Robert McNamara')).to eq(['Democratic Republic of the Congo', '+243', '1st millennium', 'Aho\'eitu', '\'Aho\'eitu', 'Casuarinace...hairs', 'Antique', 'American Pastoral', '1967 Newark riots', '1967 Detroit riot', 'Robert McNamara'])
+        expect(described_class.new.path_between('Democratic Republic of the Congo', 'Robert McNamara')).to eq(['Democratic Republic of the Congo', '+243', '1st millennium', ''Aho'eitu', 'ʻAhoʻeitu', 'Casuarinace...hairs', 'Antique', 'American Pastoral', '1967 Newark riots', '1967 Detroit riot', 'Robert McNamara'])
       end
     end
   end

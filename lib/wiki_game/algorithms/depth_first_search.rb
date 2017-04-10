@@ -9,11 +9,11 @@ module WikiGame
         @parent = {}
       end
 
-      def path_between(start_page, end_page)
-        return [] unless start_page.is_a?(String) && end_page.is_a?(String)
-        return [start_page] if start_page == end_page
-        return [] unless find_path!(start_page, end_page)
-        backtrace_path(@parent, start_page, end_page)
+      def path_between(start_page, target_page)
+        return [] unless start_page.is_a?(String) && target_page.is_a?(String)
+        return [start_page] if start_page == target_page
+        return [] unless find_path!(start_page, target_page)
+        backtrace_path(@parent, start_page, target_page)
       end
 
       protected
