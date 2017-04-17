@@ -29,25 +29,16 @@ RSpec.describe WikiGame::Algorithms::DijkstraSearch do
     context 'pages that are at least 4 links apart' do
       context 'end page is Philosophy' do
         it 'return path between the pages when is less or equal to 3 links' do
-          expect(described_class.new.path_between('Benjamin Franklin', 'Philosophy')).to eq(['Benjamin Franklin', '111th Infantry Regiment (United States)', '110th Infantry Regiment (United Sta...Template:R from ambiguous page', 'Ambiguity', 'A. J. Ayer', '20th-century philosophy', 'Philosophy'])
+          expect(described_class.new.path_between('Benjamin Franklin', 'Philosophy')).to eq(["Benjamin Franklin", "111th Infantry Regiment (United States)", "110th Infantry Regiment (United States)", "109th Infantry Regiment (United States)", "108th Infantry Regiment (United States)", "107th Infantry Regiment (United States)", "107th Infantry Memorial", "103rd Street (IND Eighth Avenue Line)", "103rd Street (disambiguation)", "Template:R from ambiguous page", "Ambiguity", "A. J. Ayer", "20th-century philosophy", "Philosophy"])
         end
 
         it 'return path between the pages when is more than 3 links' do
-          expect(described_class.new.path_between('Austro-Hungarian Empire', 'Philosophy')).to eq(['Austro-Hungarian Empire', 'Wikipedia:Piped link', 'Advent calendar', 'A Visit from St. Nicholas', '...', '5 October 1910 Revolution', '5 October 1910 revolution', '1755 Lisbon earthquake', 'Philosophy'])
+          expect(described_class.new.path_between('Austro-Hungarian Empire', 'Philosophy')).to eq(["Austro-Hungarian Empire", "Wikipedia:Piped link", "Advent calendar", "A Visit from St. Nicholas", "'Twas the Night Before Christmas (disambiguation)", "'Twas the Night", "A Christmas Carol (2009 film)", "2010 Kids' Choice Awards", "17 Again (film)", "AFI Catalog of Feature Films", "American Film Institute", "AFI's 10 Top 10", "1924 in film", "1870s in film", "1860 in film", "19th century in film", "Anna Hofman-Uddgren", "August Strindberg", "A Doll's House", "19th-century feminism", "History of feminism", "1975 Icelandic women's strike", "Althing", "Absolute monarchy", "5 October 1910 Revolution", "5 October 1910 revolution", "1755 Lisbon earthquake", "Philosophy"])
         end
       end
 
       it 'return path between the pages when the end page is reachable from the start page by long path' do
-        expect(described_class.new.path_between('London', 'Batman')).to eq(['London', '10 Downing Street', '10 Downing Street Guard Chairs', 'Acoustics', 'ANSI/ASA S1.1-2013", ...', 'File comparison', 'America Invents Act', 'Leahy-Smith America Invents Act', 'Acronym', 'Batman'])
-      end
-
-
-      it 'return path when start page is NATO and the end page is Swahili language' do
-        expect(described_class.new.path_between('NATO', 'Swahili language')).to eq(['NATO', '1949 anti-NATO riot in Iceland', 'Accession of Iceland to the European Union', '1973 enlarg...sudi', 'Abd Allah ibn Mas\'ud', 'Abdullah ibn Masud', 'Abu Bakr', 'Ab (Semitic)', 'Swahili language'])
-      end
-
-      it 'return path when start page is Democratic Republic of the Congo and the end page is Robert McNamara' do
-        expect(described_class.new.path_between('Democratic Republic of the Congo', 'Robert McNamara')).to eq(['Democratic Republic of the Congo', '+243', '1st millennium', 'Aho\'eitu', '\'Aho\'eitu', 'Casuarinace...hairs', 'Antique', 'American Pastoral', '1967 Newark riots', '1967 Detroit riot', 'Robert McNamara'])
+        expect(described_class.new.path_between('London', 'Batman')).to eq(["London", "10 Downing Street", "10 Downing Street Guard Chairs", "Acoustics", "ANSI/ASA S1.1-2013", "American National Standards Institute", "ANSI (disambiguation)", "ANSI art", "ANSI.SYS", "$CLS (environment variable)", "Template:Anchor", "Character entity reference", "List of XML and HTML character entity references", "Acute accent", "Acute (phonetics)", "Grave and acute", "Active articulator", "Speech organ", "Alveolar ridge", "Alveolar consonants", "Wikipedia:Mainspace", "Wikipedia:Namespace", "Data comparison", "File comparison", "America Invents Act", "Leahy-Smith America Invents Act", "Acronym", "Batman"])
       end
     end
   end

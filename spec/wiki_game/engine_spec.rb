@@ -64,12 +64,12 @@ RSpec.describe WikiGame::Engine do
           end
 
           it 'find a path from Benjamin Franklin to Austria-Hungary' do
-            engine = described_class.new('Benjamin+Franklin', 'Austria-Hungary', search_strategy)
+            engine = described_class.new('Benjamin Franklin', 'Austria-Hungary', search_strategy)
             expect(engine.connection_between_pages).to eq(benjamin_franklin_to_austroa_hungary)
           end
 
           xit 'find a path from Benjamin Franklin to Austro-Hungarian Empire' do
-            engine = described_class.new('Benjamin+Franklin', 'Austro-Hungarian_Empire', search_strategy)
+            engine = described_class.new('Benjamin Franklin', 'Austro-Hungarian Empire', search_strategy)
             expect(engine.connection_between_pages).to eq(['...'])
           end
         end
